@@ -24,7 +24,7 @@ public class Address {
     @NotBlank
     private String eircode;
 
-    public Address(String eircode) {
+    public Address(String eircode, String county) {
         this.county = county;
         this.eircode = eircode;
     }
