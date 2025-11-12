@@ -21,7 +21,7 @@ public class Person {
     private String department;
 
     @OneToOne(cascade = CascadeType.ALL, optional = true)
-    @JoinColumn(name = "address_id", foreignKey = @ForeignKey(name = "fk_person-address"))
+    @JoinColumn(name = "address_id", foreignKey = @ForeignKey(name = "fk_person_address"))
     private Address address;
 
     public Person(String name, String email, String employeeId, String position, String department) {
