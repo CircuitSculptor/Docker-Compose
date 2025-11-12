@@ -1,7 +1,7 @@
 services:
   db:
-    image: postgres:17-aphine
-    env_file: application.env     # POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+    image: postgres:17-alpine
+    env_file: .env     # POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
     ports:
       - "5433:5432"
     volumes:
@@ -10,12 +10,12 @@ services:
 
   api:
     build: .
-    env_file: application.env    # SPRING_PROFILES_ACTIVE, DB_*
+    env_file: .env    # SPRING_PROFILES_ACTIVE, DB_*
     depends_on:
       - db
     ports:
       - "8000:8080"
     restart: unless-stopped
 
-  volumes:
-    postgres-data: {}
+volumes:
+  postgres-data: {}
