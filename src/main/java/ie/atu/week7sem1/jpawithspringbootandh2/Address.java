@@ -18,7 +18,7 @@ public class Address {
     private String eircode;
 
     public Address(String eircode) {
-        this.eircode = eircode;
         this.county = county;
+        this.eircode = eircode;
     }
 }

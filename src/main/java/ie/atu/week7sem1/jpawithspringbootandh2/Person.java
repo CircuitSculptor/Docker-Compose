@@ -24,7 +24,7 @@ public class Person {
     @JoinColumn(name = "address_id", foreignKey = @ForeignKey(name = "fk_person_address"))
     private Address address;
 
-    public Person(String name, String email, String employeeId, String position, String department) {
+    public Person(String name, String email, String employeeId, String position, String department, Address address) {
         this.name = name;
         this.email = email;
         this.employeeId = employeeId;
